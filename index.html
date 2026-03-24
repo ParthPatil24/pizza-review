@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Buttons Page</title>
+    <style>
+        /* Reset margins and set up a full-screen centered layout */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* A subtle, modern background gradient */
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* Container to space out the buttons */
+        .button-container {
+            display: flex;
+            gap: 25px;
+        }
+
+        /* Base styling for the fancy buttons */
+        .fancy-btn {
+            text-decoration: none;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: white;
+            border-radius: 50px; /* Pill shape */
+            transition: all 0.3s ease; /* Smooth animation for hover */
+        }
+
+        /* Primary Button Style (Warm) */
+        .fancy-btn.primary {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        /* Secondary Button Style (Cool) */
+        .fancy-btn.secondary {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+        }
+
+        /* Hover Effect for both buttons */
+        .fancy-btn:hover {
+            transform: translateY(-4px); /* Moves the button slightly up */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Enhances the shadow */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="button-container">
+        <a href="https://example.com" class="fancy-btn primary" target="_blank">Primary Link</a>
+        <a href="https://example.org" class="fancy-btn secondary" target="_blank">Secondary Link</a>
+    </div>
+
+</body>
+</html>
