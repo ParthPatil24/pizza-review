@@ -3,62 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fancy Buttons Page</title>
+    <title>KaKa'zz Review</title>
     <style>
-        /* Reset margins and set up a full-screen centered layout */
+        /* Importing elegant fonts from Google */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap');
+
         body {
             margin: 0;
-            height: 100vh;
+            padding: 0;
+            background-color: #0d1117; /* Deep royal background */
+            background-image: radial-gradient(circle at top, #1a2436 0%, #0d1117 100%);
+            color: #fcf8e3;
+            font-family: 'Lato', sans-serif;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            /* A subtle, modern background gradient */
-            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Container to space out the buttons */
-        .button-container {
+        .container {
+            width: 85%;
+            max-width: 400px;
+            padding: 2.5rem 1.5rem;
+            box-sizing: border-box;
+            border: 1px solid rgba(212, 175, 55, 0.3); /* Subtle gold border */
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+        }
+
+        .ornament {
+            font-size: 1.8rem;
+            color: #D4AF37; /* Royal Gold */
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #D4AF37; 
+            margin: 0 0 0.5rem 0;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #b0b5c0;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        .button-group {
             display: flex;
-            gap: 25px;
+            flex-direction: column;
+            gap: 1.2rem;
         }
 
-        /* Base styling for the fancy buttons */
-        .fancy-btn {
+        .city-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-decoration: none;
-            padding: 16px 32px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            color: white;
-            border-radius: 50px; /* Pill shape */
-            transition: all 0.3s ease; /* Smooth animation for hover */
+            background: linear-gradient(135deg, #2a3342 0%, #161d27 100%);
+            color: #D4AF37;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            padding: 1.2rem;
+            border: 1px solid #D4AF37;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            letter-spacing: 1.5px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            text-transform: uppercase;
         }
 
-        /* Primary Button Style (Warm) */
-        .fancy-btn.primary {
-            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
-        }
-
-        /* Secondary Button Style (Cool) */
-        .fancy-btn.secondary {
-            background: linear-gradient(45deg, #4facfe, #00f2fe);
-            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
-        }
-
-        /* Hover Effect for both buttons */
-        .fancy-btn:hover {
-            transform: translateY(-4px); /* Moves the button slightly up */
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Enhances the shadow */
+        /* Hover and active states for touch feedback */
+        .city-btn:active, .city-btn:hover {
+            background: linear-gradient(135deg, #D4AF37 0%, #AA8222 100%);
+            color: #0d1117;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+            border-color: transparent;
         }
     </style>
 </head>
 <body>
 
-    <div class="button-container">
-        <a href="https://example.com" class="fancy-btn primary" target="_blank">Primary Link</a>
-        <a href="https://example.org" class="fancy-btn secondary" target="_blank">Secondary Link</a>
+    <div class="container">
+        <div class="ornament">⚜</div>
+        
+        <h1>Kaka'zz Café</h1>
+        <p>Please select your city to share your experience with us.</p>
+
+        <div class="button-group">
+            <a href="#" class="city-btn">Jalgaon</a>
+            <a href="https://share.google/74EtyI2MIokFFg3DV" class="city-btn">Pune</a>
+        </div>
     </div>
 
 </body>
